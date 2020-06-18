@@ -18,7 +18,7 @@ public class Program {
 		list.add(new Product("Cabo HDMI",50.00));
 		list.add(new Product("Headset",200.00));
 		
-		list.removeIf(Product::staticProductPredicate);
+		list.removeIf(Product::nonStaticProductPredicate);
 		
 		for(Product p: list) {
 			System.out.println(p);
