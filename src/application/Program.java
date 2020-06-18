@@ -4,7 +4,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 import entities.Product;
-import util.ProductPredicate;
 
 public class Program {
 	
@@ -19,7 +18,7 @@ public class Program {
 		list.add(new Product("Cabo HDMI",50.00));
 		list.add(new Product("Headset",200.00));
 		
-		list.removeIf(new ProductPredicate());
+		list.removeIf(Product::staticProductPredicate);
 		
 		for(Product p: list) {
 			System.out.println(p);
